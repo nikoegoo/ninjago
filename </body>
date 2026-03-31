@@ -1,0 +1,15 @@
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight / 1.2;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+
+    if(top < trigger){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
